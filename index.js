@@ -1,1 +1,2 @@
-module.exports = require('./dist/index');
+import fetchNoCors from './dist/index';
+export default fetchNoCors;
