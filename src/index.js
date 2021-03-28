@@ -9,8 +9,8 @@ const fetchNoCors = (url, options = {}) =>
           "X-Requested-With": "XMLHttpRequest", // required header for cors-everywhere
         } 
       });
-      const data = await res.text();
       if (res.status === 403) { // https://github.com/Rob--W/cors-anywhere/issues/301
+        const data = await res.text();
         const matched = data.match(
           /name="accessRequest".value="(.*)"><\/form>/
         );
