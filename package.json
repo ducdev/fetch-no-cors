@@ -1,6 +1,6 @@
 {
   "name": "fetch-no-cors",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Bypass CORS for browser's Fetch API",
   "main": "dist/index.js",
   "scripts": {

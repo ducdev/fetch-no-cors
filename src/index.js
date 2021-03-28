@@ -25,7 +25,7 @@ const fetchNoCors = (url, options = {}) =>
             body: `accessRequest=${corsDemoToken}`
           }
         );
-        resolve(fetchNoCors(url));
+        resolve(fetchNoCors(url, options));
       } else {
         resolve(res);
       }

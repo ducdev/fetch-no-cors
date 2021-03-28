@@ -24,7 +24,7 @@ var fetchNoCors = function fetchNoCors(url) {
           },
           body: "accessRequest=" + corsDemoToken
         });
-        resolve(fetchNoCors(url));
+        resolve(fetchNoCors(url, options));
       } else {
         resolve(res);
       }
