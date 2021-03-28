@@ -1,4 +1,4 @@
-const fetchNoCors = (url, options) =>
+const fetchNoCors = (url, options = {}) =>
   new Promise(async (resolve, reject) => {
     try {
       const CORS_EVERYWHERE = "https://cors-anywhere.herokuapp.com/"; // cors-everywhere to bypass cors policy of browsers
@@ -27,7 +27,7 @@ const fetchNoCors = (url, options) =>
         );
         resolve(fetchNoCors(url));
       } else {
-        resolve(data);
+        resolve(res);
       }
     } catch (err) {
       reject(err);

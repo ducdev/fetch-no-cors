@@ -2,7 +2,8 @@
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var fetchNoCors = function fetchNoCors(url, options) {
+var fetchNoCors = function fetchNoCors(url) {
+  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
   return new Promise(async function (resolve, reject) {
     try {
       var CORS_EVERYWHERE = "https://cors-anywhere.herokuapp.com/"; // cors-everywhere to bypass cors policy of browsers
@@ -25,7 +26,7 @@ var fetchNoCors = function fetchNoCors(url, options) {
         });
         resolve(fetchNoCors(url));
       } else {
-        resolve(data);
+        resolve(res);
       }
     } catch (err) {
       reject(err);
