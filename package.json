@@ -1,8 +1,8 @@
 {
   "name": "fetch-no-cors",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Bypass CORS for browser's Fetch API",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel src -d dist"
