@@ -1,0 +1,32 @@
+{
+  "name": "fetch-no-cors",
+  "version": "1.0.5",
+  "description": "Bypass CORS for browser's Fetch API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ducdev/fetch-no-cors.git"
+  },
+  "keywords": [
+    "fetch",
+    "cors",
+    "request",
+    "axios",
+    "async"
+  ],
+  "author": "Duc Le",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ducdev/fetch-no-cors/issues"
+  },
+  "homepage": "https://github.com/ducdev/fetch-no-cors#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
