@@ -1,6 +1,6 @@
 # Fetch No CORS
 
-Bypass CORS for browser's Fetch API using https://cors-anywhere.herokuapp.com/
+Bypass CORS for browser's Fetch API using https://github.com/Rob--W/cors-anywhere
 
 1. Installation
 
@@ -21,7 +21,9 @@ It's exactly like how we use the original `fetch`, you can either use it with aw
 ```
 import fetchNoCors from "fetch-no-cors"
 
-const foo = async (url, options) => {
+// You need to setup your own cors-anywhere proxy instance using https://github.com/Rob--W/cors-anywhere
+const CORS_ANYWHERE = "https://my-own-cors-anywhere-proxy.com"
+const foo = async (url, options, CORS_ANYWHERE) => {
   const res = await fetchNoCors(url, options)
   console.log(res)
 }
@@ -30,9 +32,7 @@ const foo = async (url, options) => {
 or:
 
 ```
-import fetchNoCors from "fetch-no-cors"
-
-fetchNoCors(url, options)
+fetchNoCors(url, options, CORS_ANYWHERE)
   .then(res => console.log(res))
   .catch(err => console.error(err))
 ```
